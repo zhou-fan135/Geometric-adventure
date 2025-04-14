@@ -1,0 +1,225 @@
+/* Define o estilo geral do corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+    display: flex; /* Usa flexbox para centralizar elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela */
+    overflow: hidden; /* Remove barras de rolagem */
+}
+
+/* Estiliza o contêiner principal do jogo */
+#game-container {
+    width: 800px; /* Largura fixa */
+    height: 600px; /* Altura fixa */
+    border: 2px solid black; /* Borda preta */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+}
+
+/* Estiliza o botão de "play" */
+#play-button {
+    padding: 15px 30px; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    background-color: #28a745; /* Cor de fundo verde */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de "mão" ao passar */
+    transition: background-color 0.3s; /* Animação suave ao mudar cor */
+}
+
+/* Estilo ao passar o mouse sobre o botão de "play" */
+#play-button:hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+
+/* Estiliza a seleção de níveis */
+.level-selection {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estiliza os botões de nível */
+.level-button {
+    display: inline-block; /* Exibe como bloco inline */
+    width: 40px; /* Largura fixa */
+    height: 40px; /* Altura fixa */
+    line-height: 40px; /* Alinha texto verticalmente */
+    text-align: center; /* Centraliza texto horizontalmente */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    color: #007bff; /* Cor azul */
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #007bff; /* Borda azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de "mão" ao passar */
+    transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Animações suaves */
+}
+
+/* Estilo ao passar o mouse sobre os botões de nível */
+.level-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho */
+    background-color: #007bff; /* Fundo azul */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Define uma animação de fade-in */
+.animation {
+    animation: fadeIn 0.5s ease-in-out; /* Animação de opacidade */
+}
+
+/* Keyframes para a animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Torna-se visível */
+    }
+}
+
+/* Estiliza botões genéricos */
+button {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    margin: 5px; /* Margem ao redor */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de "mão" ao passar */
+    transition: background-color 0.3s; /* Animação suave ao mudar cor */
+}
+
+/* Estilo ao passar o mouse sobre botões genéricos */
+button:hover {
+    background-color: #ddd; /* Fundo cinza claro */
+}
+
+/* Estiliza a tela inicial e o contêiner de níveis */
+.initial-screen,
+.level-container {
+    text-align: center; /* Centraliza texto */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    width: 400px; /* Largura fixa */
+    max-width: 90%; /* Ajusta para telas menores */
+}
+
+/* Estiliza títulos na tela inicial e seção de título */
+.initial-screen h1,
+.title-section h2 {
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #333; /* Cor do texto */
+}
+
+/* Estiliza botões na tela inicial e botões de nível */
+.initial-screen button,
+.level-button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #28a745; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de "mão" ao passar */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Animação suave ao mudar cor */
+}
+
+/* Estilo ao passar o mouse sobre botões na tela inicial e botões de nível */
+.initial-screen button:hover,
+.level-button:hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+
+/* Estiliza o contêiner de níveis */
+.level-container {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    position: absolute; /* Fixa posição */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro */
+    margin: 0; /* Remove margens */
+    padding: 20px; /* Espaçamento interno */
+    width: 500px; /* Largura fixa */
+    max-width: 90%; /* Ajusta para telas menores */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Estiliza a seção de título */
+.title-section {
+    text-align: center; /* Centraliza texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estiliza o título na seção de título */
+.title-section h2 {
+    font-size: 24px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estiliza o menu de níveis */
+.level-menu {
+    display: grid; /* Usa grid layout */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento superior */
+    justify-content: center; /* Centraliza o grid */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Estiliza a sobreposição do menu */
+.menu-overlay {
+    position: fixed; /* Fixa posição na tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro */
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+    text-align: center; /* Centraliza texto */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Estiliza botões no menu */
+.menu-overlay button {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    margin: 10px; /* Margem ao redor */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de "mão" ao passar */
+    background-color: #28a745; /* Fundo verde */
+    color: white; /* Texto branco */
+    transition: background-color 0.3s, transform 0.2s; /* Animações suaves */
+}
+
+/* Estilo ao passar o mouse sobre botões no menu */
+.menu-overlay button:hover {
+    background-color: #218838; /* Verde mais escuro */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+/* Estiliza o título no menu */
+.menu-overlay h1 {
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #333; /* Cor do texto */
+}
